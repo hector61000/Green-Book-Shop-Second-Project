@@ -8,7 +8,6 @@ interface ProductCardProps {
   imageUrl: string;
   paperPrice: number;
   electronicPrice: number;
-  onPriceChange?: (price: number) => void;
   onSelectionChange?: (title: string, type: "paper" | "electronic", selected: boolean) => void;
 }
 
@@ -18,7 +17,6 @@ const ProductCard = ({
   imageUrl, 
   paperPrice, 
   electronicPrice,
-  onPriceChange,
   onSelectionChange
 }: ProductCardProps) => {
   const [selectedPaper, setSelectedPaper] = useState(false);
@@ -26,9 +24,6 @@ const ProductCard = ({
 
   const handlePaperChange = (checked: boolean) => {
     setSelectedPaper(checked);
-    if (onPriceChange) {
-      onPriceChange(checked ? paperPrice : -paperPrice);
-    }
     if (onSelectionChange) {
       onSelectionChange(title, "paper", checked);
     }
@@ -36,9 +31,6 @@ const ProductCard = ({
 
   const handleElectronicChange = (checked: boolean) => {
     setSelectedElectronic(checked);
-    if (onPriceChange) {
-      onPriceChange(checked ? electronicPrice : -electronicPrice);
-    }
     if (onSelectionChange) {
       onSelectionChange(title, "electronic", checked);
     }
@@ -67,7 +59,7 @@ const ProductCard = ({
                 اختر النسخة الورقية
               </label>
             </div>
-            <span className="font-bold text-green-primary">{paperPrice} جنيه</span>
+            <span className="font-bold text-green-primary">399 جنيه</span>
           </div>
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
@@ -80,7 +72,7 @@ const ProductCard = ({
                 اختر النسخة الإلكترونية
               </label>
             </div>
-            <span className="font-bold text-green-primary">{electronicPrice} جنيه</span>
+            <span className="font-bold text-green-primary">150 جنيه</span>
           </div>
         </div>
       </CardContent>

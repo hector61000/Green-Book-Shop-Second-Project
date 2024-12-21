@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import OrderForm from "@/components/OrderForm";
+import { calculatePaperBooksPrice, calculateElectronicBooksPrice } from "@/utils/priceCalculations";
 
 interface SelectedBook {
   title: string;
@@ -171,16 +172,25 @@ const Index = () => {
   const [selectedBooks, setSelectedBooks] = useState<SelectedBook[]>([]);
   const [isOrderFormOpen, setIsOrderFormOpen] = useState(false);
 
-  const handlePriceChange = (price: number) => {
-    setTotalPrice((prev) => prev + price);
+  const calculateTotalPrice = (books: SelectedBook[]) => {
+    const paperBooks = books.filter(book => book.type === "paper").length;
+    const electronicBooks = books.filter(book => book.type === "electronic").length;
+    
+    const paperPrice = calculatePaperBooksPrice(paperBooks);
+    const electronicPrice = calculateElectronicBooksPrice(electronicBooks);
+    
+    return paperPrice + electronicPrice;
   };
 
   const handleSelectionChange = (title: string, type: "paper" | "electronic", selected: boolean) => {
+    let newSelectedBooks: SelectedBook[];
     if (selected) {
-      setSelectedBooks(prev => [...prev, { title, type }]);
+      newSelectedBooks = [...selectedBooks, { title, type }];
     } else {
-      setSelectedBooks(prev => prev.filter(book => !(book.title === title && book.type === type)));
+      newSelectedBooks = selectedBooks.filter(book => !(book.title === title && book.type === type));
     }
+    setSelectedBooks(newSelectedBooks);
+    setTotalPrice(calculateTotalPrice(newSelectedBooks));
   };
 
   return (
@@ -200,7 +210,6 @@ const Index = () => {
               imageUrl={category.imageUrl}
               paperPrice={category.paperPrice}
               electronicPrice={category.electronicPrice}
-              onPriceChange={handlePriceChange}
               onSelectionChange={handleSelectionChange}
             />
           ))}
