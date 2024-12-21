@@ -46,7 +46,7 @@ const ProductCard = ({
         />
       </CardHeader>
       <CardContent className="p-4">
-        <h3 className="text-xl font-bold mb-4 text-green-primary">{title}</h3>
+        <h3 className="text-xl font-bold mb-4 text-green-primary text-right">{title}</h3>
         <div className="space-y-3 text-right">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">

@@ -171,17 +171,7 @@ const Index = () => {
     <div className="min-h-screen bg-green-light">
       <Header />
       <Hero />
-      <main className="container mx-auto px-4 py-12">
-        <div className="fixed top-4 left-4 bg-[#FEF7CD] p-4 rounded-lg shadow-md z-50 text-right">
-          <div className="flex items-center gap-2">
-            <span className="text-lg font-bold">الإجمالي:</span>
-            <span className="text-xl font-bold text-green-primary">{totalPrice} جنيه</span>
-          </div>
-          <button className="mt-2 bg-[#F97316] text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors">
-            اطلب الآن
-          </button>
-        </div>
-
+      <main className="container mx-auto px-4 py-12 mb-24">
         <h2 className="text-3xl font-bold text-green-primary mb-8 text-center">
           تصفح الكتب حسب الفئة
         </h2>
@@ -199,6 +189,15 @@ const Index = () => {
           ))}
         </div>
       </main>
+      <div className="fixed bottom-4 left-4 bg-[#FEF7CD] p-4 rounded-lg shadow-md z-50 text-right">
+        <div className="flex items-center gap-2">
+          <span className="text-lg font-bold">الإجمالي:</span>
+          <span className="text-xl font-bold text-green-primary">{totalPrice} جنيه</span>
+        </div>
+        <button className="mt-2 bg-[#F97316] text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors w-full">
+          اطلب الآن
+        </button>
+      </div>
     </div>
   );
 };
