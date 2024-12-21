@@ -108,6 +108,55 @@ const categories = [
     imageUrl: "/lovable-uploads/202f3899-1fe0-4ac8-9576-ccb4d43bed6d.png",
     paperPrice: 399,
     electronicPrice: 150,
+  },
+  {
+    title: "ملخصات أفضل كتب التربية للأطفال أسوياء نفسياً",
+    description: "مجموعة من أفضل كتب التربية وعلم النفس لأفضل المؤلفين المتخصصين في علم النفس السلوكي",
+    imageUrl: "/lovable-uploads/ccb568fd-e479-4063-b6b4-032c52858826.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "موسوعة ملخصات كتب فن القيادة والسيطرة",
+    description: "مجموعة من أفضل الكتب العالمية في فنون القيادة والسيطرة والتأثير على الآخرين لأشهر المؤلفين المتخصصين في علم النفس",
+    imageUrl: "/lovable-uploads/9457c846-0f5c-4082-8268-6381c3b3d726.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "وصفات سرية لأشهر 100 نوع من الشيكولاتة السويسرية",
+    description: "تعلم كيف تصنع أفضل وأغلى أنواع الشيكولاتة السويسرية في منزلك",
+    imageUrl: "/lovable-uploads/9e52cdd6-a87b-4aab-9d73-6beb23f0b71b.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "وصفات سرية لأشهر 100 نوع من الأجبان العالمية",
+    description: "تعلم كيف تصنع أفضل وأغلى أنواع الأجبان العالمية في منزلك",
+    imageUrl: "/lovable-uploads/8817e2d1-a795-4049-b3c9-146e8013a705.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "3000 سر للنجاح",
+    description: "تعلم أسرار النجاح في حياتك بكل تفاصيلها في العمل والفن والأسرة والحياة الشخصية والآخرة",
+    imageUrl: "/lovable-uploads/f59c0d92-69ba-4b18-bf51-eb5e0364eeac.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "كيف تصبح مثقفاً في أسبوع",
+    description: "أكثر من 3000 معلومة مجموعة من آلاف الكتب في جميع التخصصات لتجعل منك شخصاً شديد الإطلاع على العالم من حولك",
+    imageUrl: "/lovable-uploads/c22c8895-dc19-47ad-adad-42ef4d523486.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "100 منتج من اللحوم",
+    description: "تعلم أسرار صناعات اللحوم المصنعة وطرق التصنيع - كيف تبدأ مشروع لإنتاج مصنعات اللحوم بسهولة",
+    imageUrl: "/lovable-uploads/5fbadbfa-fb8b-432e-aab8-efb93a6297cd.png",
+    paperPrice: 399,
+    electronicPrice: 150,
   }
 ];
 
