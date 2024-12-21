@@ -73,6 +73,41 @@ const categories = [
     imageUrl: "/lovable-uploads/dbbdbb99-b467-4b21-bc05-5594cc61732a.png",
     paperPrice: 399,
     electronicPrice: 150,
+  },
+  {
+    title: "تعلم صناعة 100 صنف من المخبوزات والحلويات",
+    description: "إبدأ مشروعك التجاري الصغير برأس مال قليل لإنتاج المخبوزات والحلويات وبيعها للمحلات الكبيرة وعلى الإنترنت",
+    imageUrl: "/lovable-uploads/e37c2a1e-a02d-4fca-afb4-c7ae038dc4a0.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "تعلم صناعة أفخم 100 عطر عالمي",
+    description: "إبدأ مشروعك التجاري الصغير برأس مال قليل لإنتاج أفخم العطور العالمية المشهورة ذات التركيبات السرية",
+    imageUrl: "/lovable-uploads/947d7d43-0493-43cd-972b-2212b1440a22.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "300 وصفة علاجية - موسوعة الطب البديل",
+    description: "تعلم أسرار وفن العلاج بالأعشاب الطبية لجميع الأمراض - علاج أكثر من 300 مرض بطريقة طبيعية",
+    imageUrl: "/lovable-uploads/e741cb44-799e-4192-b3f4-c01824eab781.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "المدرب المحترف - موسوعة تدريب الحيوانات",
+    description: "تعلم كيف تصبح مدرباً محترفاً للحيوانات للحصول على فرصة عمل بمرتب كبير داخل أو خارج البلاد",
+    imageUrl: "/lovable-uploads/4aca749a-3d10-4496-b169-280268f0dee0.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "صناعات مربحة",
+    description: "تعلم كيف تبدأ مشروعك المناسب من بين 100 مشروع للصناعات الكيميائية وصناعة المنظفات والعطور والملمعات",
+    imageUrl: "/lovable-uploads/202f3899-1fe0-4ac8-9576-ccb4d43bed6d.png",
+    paperPrice: 399,
+    electronicPrice: 150,
   }
 ];
 
