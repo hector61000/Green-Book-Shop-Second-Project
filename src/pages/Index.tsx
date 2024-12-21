@@ -38,6 +38,41 @@ const categories = [
     imageUrl: "/lovable-uploads/21075c65-b925-473d-953a-2b882a9efe2f.png",
     paperPrice: 399,
     electronicPrice: 150,
+  },
+  {
+    title: "موسوعة ملخصات كتب تطوير الذات",
+    description: "مجموعة من أفضل الكتب العالمية في تطوير الذات والنجاح الشخصي",
+    imageUrl: "/lovable-uploads/2d911b21-3bc7-4e7e-bf3b-abc4bd9446e0.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "موسوعة ملخصات كتب الذكاء العاطفي",
+    description: "مجموعة من أفضل الكتب العالمية في فهم وتطوير الذكاء العاطفي",
+    imageUrl: "/lovable-uploads/5971faaa-20d9-4f6b-9ab6-b47a0520f66a.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "موسوعة ملخصات كتب القيادة الناجحة",
+    description: "مجموعة من أفضل الكتب العالمية في القيادة وإدارة الفرق",
+    imageUrl: "/lovable-uploads/9ed92319-5911-4750-b45b-7bf07326f215.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "موسوعة ملخصات كتب التسويق الرقمي",
+    description: "مجموعة من أفضل الكتب العالمية في التسويق الرقمي ووسائل التواصل الاجتماعي",
+    imageUrl: "/lovable-uploads/aafad4ea-0cc3-416d-87d0-9831f47cf939.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  },
+  {
+    title: "موسوعة ملخصات كتب إدارة الوقت",
+    description: "مجموعة من أفضل الكتب العالمية في إدارة الوقت وتحقيق الإنتاجية",
+    imageUrl: "/lovable-uploads/dbbdbb99-b467-4b21-bc05-5594cc61732a.png",
+    paperPrice: 399,
+    electronicPrice: 150,
   }
 ];
 
