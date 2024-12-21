@@ -9,6 +9,7 @@ interface ProductCardProps {
   paperPrice: number;
   electronicPrice: number;
   onPriceChange?: (price: number) => void;
+  onSelectionChange?: (title: string, type: "paper" | "electronic", selected: boolean) => void;
 }
 
 const ProductCard = ({ 
@@ -17,7 +18,8 @@ const ProductCard = ({
   imageUrl, 
   paperPrice, 
   electronicPrice,
-  onPriceChange 
+  onPriceChange,
+  onSelectionChange
 }: ProductCardProps) => {
   const [selectedPaper, setSelectedPaper] = useState(false);
   const [selectedElectronic, setSelectedElectronic] = useState(false);
@@ -27,12 +29,18 @@ const ProductCard = ({
     if (onPriceChange) {
       onPriceChange(checked ? paperPrice : -paperPrice);
     }
+    if (onSelectionChange) {
+      onSelectionChange(title, "paper", checked);
+    }
   };
 
   const handleElectronicChange = (checked: boolean) => {
     setSelectedElectronic(checked);
     if (onPriceChange) {
       onPriceChange(checked ? electronicPrice : -electronicPrice);
+    }
+    if (onSelectionChange) {
+      onSelectionChange(title, "electronic", checked);
     }
   };
 

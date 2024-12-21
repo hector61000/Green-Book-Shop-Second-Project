@@ -2,6 +2,12 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
+import OrderForm from "@/components/OrderForm";
+
+interface SelectedBook {
+  title: string;
+  type: "paper" | "electronic";
+}
 
 const categories = [
   {
@@ -162,9 +168,19 @@ const categories = [
 
 const Index = () => {
   const [totalPrice, setTotalPrice] = useState(0);
+  const [selectedBooks, setSelectedBooks] = useState<SelectedBook[]>([]);
+  const [isOrderFormOpen, setIsOrderFormOpen] = useState(false);
 
   const handlePriceChange = (price: number) => {
     setTotalPrice((prev) => prev + price);
+  };
+
+  const handleSelectionChange = (title: string, type: "paper" | "electronic", selected: boolean) => {
+    if (selected) {
+      setSelectedBooks(prev => [...prev, { title, type }]);
+    } else {
+      setSelectedBooks(prev => prev.filter(book => !(book.title === title && book.type === type)));
+    }
   };
 
   return (
@@ -185,6 +201,7 @@ const Index = () => {
               paperPrice={category.paperPrice}
               electronicPrice={category.electronicPrice}
               onPriceChange={handlePriceChange}
+              onSelectionChange={handleSelectionChange}
             />
           ))}
         </div>
@@ -194,10 +211,19 @@ const Index = () => {
           <span className="text-lg font-bold">الإجمالي:</span>
           <span className="text-xl font-bold text-green-primary">{totalPrice} جنيه</span>
         </div>
-        <button className="mt-2 bg-[#F97316] text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors w-full">
+        <button 
+          className="mt-2 bg-[#F97316] text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors w-full"
+          onClick={() => setIsOrderFormOpen(true)}
+        >
           اطلب الآن
         </button>
       </div>
+      <OrderForm 
+        isOpen={isOrderFormOpen}
+        onClose={() => setIsOrderFormOpen(false)}
+        totalPrice={totalPrice}
+        selectedBooks={selectedBooks}
+      />
     </div>
   );
 };
