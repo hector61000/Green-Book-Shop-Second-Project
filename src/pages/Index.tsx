@@ -5,33 +5,40 @@ import ProductCard from "@/components/ProductCard";
 
 const categories = [
   {
-    title: "الكتب العلمية",
-    description: "اكتشف أحدث الكتب في مجالات العلوم والتكنولوجيا والطب",
-    imageUrl: "/placeholder.svg",
+    title: "موسوعة ملخصات كتب البيع الناجح",
+    description: "مجموعة من أفضل الكتب العالمية في التسويق والبيع لأشهر المؤلفين المتخصصين في المبيعات",
+    imageUrl: "/lovable-uploads/aafad4ea-0cc3-416d-87d0-9831f47cf939.png",
     paperPrice: 399,
     electronicPrice: 150,
   },
   {
-    title: "الأدب والشعر",
-    description: "استمتع بأجمل الروايات والقصص والدواوين الشعرية",
-    imageUrl: "/placeholder.svg",
+    title: "موسوعة ملخصات كتب البيع الناجح 2",
+    description: "مجموعة من أفضل الكتب العالمية في التسويق والبيع لأشهر المؤلفين المتخصصين في المبيعات",
+    imageUrl: "/lovable-uploads/5971faaa-20d9-4f6b-9ab6-b47a0520f66a.png",
     paperPrice: 399,
     electronicPrice: 150,
   },
   {
-    title: "كتب الأطفال",
-    description: "مجموعة متنوعة من الكتب التعليمية والقصص للأطفال",
-    imageUrl: "/placeholder.svg",
+    title: "موسوعة ملخصات كتب الذاكرة الحديدية",
+    description: "مجموعة من أفضل الكتب العالمية في تنمية المهارات العقلية والذهنية",
+    imageUrl: "/lovable-uploads/dbbdbb99-b467-4b21-bc05-5594cc61732a.png",
     paperPrice: 399,
     electronicPrice: 150,
   },
   {
-    title: "التنمية البشرية",
-    description: "كتب تساعدك على تطوير مهاراتك وتحقيق أهدافك",
-    imageUrl: "/placeholder.svg",
+    title: "موسوعة ملخصات كتب الحلم الواعي",
+    description: "مجموعة من أفضل الكتب العالمية في علم النوم والتحكم بالأحلام",
+    imageUrl: "/lovable-uploads/2d911b21-3bc7-4e7e-bf3b-abc4bd9446e0.png",
     paperPrice: 399,
     electronicPrice: 150,
   },
+  {
+    title: "كتاب الحصن والعلاج",
+    description: "تعلم كيف تحصن نفسك وأهلك من الحسد والمس والسحر من القرآن والسنة النبوية",
+    imageUrl: "/lovable-uploads/9ed92319-5911-4750-b45b-7bf07326f215.png",
+    paperPrice: 399,
+    electronicPrice: 150,
+  }
 ];
 
 const Index = () => {
@@ -59,7 +66,7 @@ const Index = () => {
         <h2 className="text-3xl font-bold text-green-primary mb-8 text-center">
           تصفح الكتب حسب الفئة
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category) => (
             <ProductCard
               key={category.title}
