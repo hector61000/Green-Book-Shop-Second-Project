@@ -42,12 +42,12 @@ const ProductCard = ({
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-[400px] object-cover"
+          className="w-full h-[200px] sm:h-[300px] md:h-[400px] object-cover"
         />
       </CardHeader>
-      <CardContent className="p-4">
-        <h3 className="text-xl font-bold mb-4 text-green-primary text-right">{title}</h3>
-        <div className="space-y-3 text-right">
+      <CardContent className="p-3 md:p-4">
+        <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-green-primary text-right line-clamp-2">{title}</h3>
+        <div className="space-y-2 md:space-y-3 text-right">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Checkbox 
@@ -55,11 +55,11 @@ const ProductCard = ({
                 checked={selectedPaper}
                 onCheckedChange={handlePaperChange}
               />
-              <label htmlFor={`paper-${title}`} className="text-sm text-gray-600">
+              <label htmlFor={`paper-${title}`} className="text-xs md:text-sm text-gray-600">
                 اختر النسخة الورقية
               </label>
             </div>
-            <span className="font-bold text-green-primary">399 جنيه</span>
+            <span className="font-bold text-green-primary text-sm md:text-base">399 جنيه</span>
           </div>
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
@@ -68,11 +68,11 @@ const ProductCard = ({
                 checked={selectedElectronic}
                 onCheckedChange={handleElectronicChange}
               />
-              <label htmlFor={`electronic-${title}`} className="text-sm text-gray-600">
+              <label htmlFor={`electronic-${title}`} className="text-xs md:text-sm text-gray-600">
                 اختر النسخة الإلكترونية
               </label>
             </div>
-            <span className="font-bold text-green-primary">150 جنيه</span>
+            <span className="font-bold text-green-primary text-sm md:text-base">150 جنيه</span>
           </div>
         </div>
       </CardContent>
